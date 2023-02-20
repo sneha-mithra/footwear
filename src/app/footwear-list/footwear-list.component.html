@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color:  #b0d8f4">
+    <ul class ="navbar-nav">
+    <li class = "nav-item">
+      <a routerLink="/footwears" routerLinkActive ="active"  class = "nav-link" >Footwear List</a>
+    </li>
+    <li class = "nav-item">
+        <a routerLink="/create-footwear" routerLinkActive ="active"  class = "nav-link" > Add Footwear </a>
+      </li>
+        
+        <li class = "nav-item">
+          <a routerLink="/login" routerLinkActive ="active"  class = "nav-link" >Logout</a>
+        </li>
+      </ul> 
+  </nav>
+  <div>
+    <footer class = "footer">
+      <div class = "container">
+        <span>Happy Shopping...!! </span>
+      </div>
+    </footer>
+    </div>
+
+<h2 > Footwear List</h2>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th> Batch Id </th>
+            <th> Brand </th>
+            <th> Type </th>
+            <th> Size </th>
+            <th> Price  </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let footwear of footwears">
+            <td>{{footwear.batchid}}</td>
+            <td>{{footwear.fbrand}}</td>
+            <td>{{footwear.ftype}}</td>
+            <td>{{footwear.fsize}}</td>
+            <td>{{footwear.fprice}}</td>
+            <td>
+                <button (click)="updateFootwear(footwear.batchid)" class = "btn btn-info">Update</button>
+                <button (click)="deleteFootwear(footwear.batchid)" class = "btn btn-danger" style="margin-left: 10px">Delete</button>
+                <button (click)="footwearDetails(footwear.batchid)" class = "btn btn-info" style="margin-left: 10px">View</button>
+
+            </td> 
+            
+        </tr>
+    </tbody>
+</table>

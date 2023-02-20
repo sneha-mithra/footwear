@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color:  #b0d8f4">
+    <ul class ="navbar-nav">
+    <li class = "nav-item">
+      <a routerLink="/footwears" routerLinkActive ="active"  class = "nav-link" >Footwear List</a>
+    </li>
+    <li class = "nav-item">
+        <a routerLink="/create-footwear" routerLinkActive ="active"  class = "nav-link" > Add Footwear </a>
+      </li>
+        
+        <li class = "nav-item">
+          <a routerLink="/login" routerLinkActive ="active"  class = "nav-link" >Logout</a>
+        </li>
+      </ul> 
+  </nav>
+  <div>
+    <footer class = "footer">
+      <div class = "container">
+        <span>Happy Shopping...!! </span>
+      </div>
+    </footer>
+    </div>
+<br>
+<h3>View Footwear Details</h3>
+<hr>
+<div class="container">
+    <div>
+        <label> <b> Batch-id:</b></label> {{footwear.batchid}}
+    </div>
+    <div>
+        <label> <b> Footwear Brand:</b></label> {{footwear.fbrand}}
+    </div>
+    <div>
+        <label> <b> Footwear Type:</b></label> {{footwear.ftype}}
+    </div>
+    <div>
+        <label> <b> Footwear Size:</b></label> {{footwear.fsize}}
+    </div>
+    <div>
+        <label> <b> Footwear Price:</b></label> {{footwear.fprice}}
+    </div>
+</div>
